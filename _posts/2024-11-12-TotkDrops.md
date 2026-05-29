@@ -753,7 +753,6 @@ To keep the results concise We'll plot the eigenvalue magnitudes and list the mo
 
 <img src="assets/img/ending_thumbnail.png" width="1000" align="center">
 
-
 Under some different models we saw some similar monster items remain in the long run.
 
 This doesn’t necessarily mean that all of these are optimal to try and obtain but it does explain some situations where you might find these persistent in your inventory
@@ -769,6 +768,8 @@ Despite being fragile, Gibdo bones seem quite good as you care more about damage
 Some conventioonally strong monster parts (like Silver Lynel Horns) don't show up as much in our equillibria probably because with our base weapon its hard to defeat these monsters so we don't end up with these.
 
 Lots of Lizalfos parts (of many colors) show up in the equillibria.
+
+[Edit:] A note for the above, I somewhat implicitly assumed that the above $$T$$s were diagonalizable. As a technical note this doesn't have to be true - but if instead I decomposed a non-diagnoalizable $$T$$ into Jordan Normal Form, I could use the eigenvalues of that matrix as rough scaling factors - either of the eigenvectors, or of roughly) the generalized eigenvectors corresponding to the Jordan Blocks. Since the goal here was to play around with the idea of the game's weapon system being a linear dynamical system, I think just taking the result of `LA.eig` (which gives us eigenvalues  either way), and the "approximate" eigenvectors (either traditional or Jordan) paints an ok starting picture here. Best to not worry too much abot the exact eigenvector composition.
 
 # Credits
 
